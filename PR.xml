@@ -31,7 +31,7 @@
         <p> mongoimport -d CONDOMINIO -c fracoes fracoes.json --jsonArray</p>
 
        </p>
-
+        <p> Ambos as aplicações podem ser executadas com "npm start" </p>
     </abstract>
     <deliverables>
         <link url="./ex1"> Servidor da API de dados pedida no primeiro exercício</link>
