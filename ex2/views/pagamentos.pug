@@ -1,0 +1,84 @@
+
+extends layout
+
+block content
+    .w3-container.w3-margin
+        table.w3-table-all
+            tr 
+                th Fracao
+                th Jan 
+                th Fev 
+                th Mar 
+                th Abr 
+                th Mai 
+                th Jun 
+                th Jul 
+                th Ago
+                th Set 
+                th Out 
+                th Nov 
+                th Dez
+            each t in dados
+                tr
+                    td= t.Fracao  
+                    td= t.Jan 
+                    td= t.Fev 
+                    td= t.Mar 
+                    td= t.Abr
+                    td= t.Mai
+                    td= t.Jun
+                    td= t.Jul
+                    td= t.Ago
+                    td= t.Set
+                    td= t.Out
+                    td= t.Nov
+                    td= t.Dez
+
+    h2 Adicionar Pagamento 
+    .w3-container.w3-white.w3-border.w3-round-large.w3-margin
+        .w3-container.w3-gray
+            h3 Introduza os valores necessários:
+        form.w3-container(action='/api/pagamentos' method='POST')
+            p
+                label Fracao:
+                input.w3-input(type="text" name="fracao")
+            p
+                label Janeiro:
+                input.w3-input(type="text" name="jan")
+            p
+                label Fevereiro:
+                input.w3-input(type="text" name="fev")
+            p
+                label Março:
+                input.w3-input(type="text" name="mar")
+            p
+                label Abril:
+                input.w3-input(type="text" name="abr")
+            p
+                label Maio:
+                input.w3-input(type="text" name="mai")
+            p
+                label Junho:
+                input.w3-input(type="text" name="jun")
+            p
+                label Julho:
+                input.w3-input(type="text" name="jul")
+            p
+                label Agosto:
+                input.w3-input(type="text" name="ago")
+            p
+                label Setembro:
+                input.w3-input(type="text" name="set")
+            p
+                label Outubro:
+                input.w3-input(type="text" name="out")
+            p
+                label Novembro:
+                input.w3-input(type="text" name="nov")
+            p
+                label Dezembro:
+                input.w3-input(type="text" name="dez")
+
+            input.w3-btn.w3-gray(type="submit" value="Enviar")
+            
+    a(href='/') Página Inicial

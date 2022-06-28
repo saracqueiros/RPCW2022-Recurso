@@ -1,0 +1,3 @@
+mongoimport -d CONDOMINIO -c pagamentos pagamentos.json --jsonArray
+mongoimport -d CONDOMINIO -c movimentos movimentos.json --jsonArray
+mongoimport -d CONDOMINIO -c fracoes fracoes.json --jsonArray

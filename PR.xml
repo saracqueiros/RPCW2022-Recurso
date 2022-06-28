@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pr SYSTEM 'ProjectRecord.dtd'>
+<pr>
+    <meta>
+        <key>RPCW2022:Recurso</key>
+        <title>Recurso RPCW 2022</title>
+        <bdate>2022-06-21</bdate>
+        <edate>2022-06-21</edate>
+        <supervisor url="http://www.di.uminho.pt/~jcr">
+            José Carlos Ramalho
+        </supervisor>
+    </meta>
+    <team>
+        <member id="PG47661">
+            <name>Sara Queirós</name>
+            <email>pg47661@alunos.uminho.pt</email>
+            <link url="https://github.com/saracqueiros" />
+        </member>
+    </team>
+    <abstract>
+        
+        <p>
+           <b>Exercício 1 :</b> 
+        Para efetuar o exercício 1 foi necessário trabalhar os dados para colocá-los em JSON.
+        Deste modo, o ficheiro transformData.py possui o modo como tal foi feito.
+        Para além disso, com recurso a ferramentas editoras de texto foram removidos todos os caracteres que poderiam causar problemas, nomeadamente acentuação. 
+        Assim, no final foram criados 3 ficheiros JSON importados para a base de dados da seguinte forma:
+         
+        <p> mongoimport -d CONDOMINIO -c pagamentos pagamentos.json --jsonArray </p>
+        <p> mongoimport -d CONDOMINIO -c movimentos movimentos.json --jsonArray</p>
+        <p> mongoimport -d CONDOMINIO -c fracoes fracoes.json --jsonArray</p>
+
+       </p>
+
+    </abstract>
+    <deliverables>
+        <link url="./ex1"> Servidor da API de dados pedida no primeiro exercício</link>
+        <link url="./ex2"> Servidor da interface pedida no segundo exercício</link>
+    </deliverables>
+</pr>

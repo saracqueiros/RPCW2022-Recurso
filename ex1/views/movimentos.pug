@@ -1,0 +1,51 @@
+
+extends layout
+
+block content
+    .w3-container.w3-margin
+        table.w3-table-all
+            tr
+                th Data
+                th Numero 
+                th Tipo 
+                th Valor 
+                th Entidade
+                th Descricao 
+            each t in dados
+                tr
+                    td= t.Data  
+                    td= t.Numero 
+                    td= t.Tipo 
+                    td= t.Valor 
+                    td= t.Entidade
+                    td= t.Descricao
+
+    h2 Adicionar Movimento 
+
+    .w3-container.w3-white.w3-border.w3-round-large.w3-margin
+        .w3-container.w3-gray
+            h3 Introduza os valores necessários:
+        form.w3-container(action='/api/movimentos' method='POST')
+            p
+                label Data: 
+                input.w3-input(type="text" name="data")
+            p
+                label Número:
+                input.w3-input(type="text" name="numero")
+            p
+                label Tipo:
+                input.w3-input(type="text" name="tipo")
+            p
+                label Valor:
+                input.w3-input(type="text" name="valor")
+            p
+                label Entidade:
+                input.w3-input(type="text" name="ent")
+            p   
+                label Descrição:
+                input.w3-input(type="text" name="desc")
+        
+
+            input.w3-btn.w3-gray(type="submit" value="Enviar")
+            
+    a(href='/') Página Inicial
